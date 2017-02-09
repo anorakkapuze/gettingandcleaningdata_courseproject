@@ -1,0 +1,52 @@
+## Introduction
+
+This code book explains the data set contained in final_data_set.txt, which is generated via the run_analysis.R script, which requires the UCI HAR Dataset folder with the original data on the same hierarchy level.
+The data ist a summary of the data given in the UCI HAR Dataset. This code book explains the variables in the final data set, and for this refers to the original code book.
+The original data, together with the original code book, can be found under https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+## Variables
+The variables in the original data were features derived from intertial time series recorded each for one out of 30 subjects performing one out of 6 possible activities. The final data set contains the mean values of these variables (reduced to only those that measure mean() and std() values), where the mean is taken over all observations for each subject and activity. The final data set was merged from the training and test data of the original data.
+
+* Activity
+The activity variable lists the activity performed, as described in features_info.txt of the original data. The activities are:
+WALKING
+
+WALKING_UPSTAIRS
+
+WALKING_DOWNSTAIRS
+
+SITTING
+
+STANDING
+
+LAYING
+
+There is one observation per subject per activity.
+
+*SubjectNumber
+The number of the person performing the activity, as assigned in the original data. Since 30 people participated, the SubjectNumbers range from 1 to 30.
+
+*mean(<var>)
+All other variables are labelled "mean(<var>)" where <var> stands for one of the variables (=features) in the original data set which recorded either the mean(), i.e. the mean value, or the std(), i.e. the standard deviation, of a certain measure. Those variables are
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+Please refer to the original code book, features_info.txt, for a more detailed description of these feature variables.
+
+
